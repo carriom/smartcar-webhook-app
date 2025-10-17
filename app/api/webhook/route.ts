@@ -153,7 +153,14 @@ export async function POST(req: NextRequest) {
         })
         .returning()
 
-      eventRow = result[0]
+      console.log('📊 Database insert result:', { 
+        resultType: typeof result, 
+        isArray: Array.isArray(result), 
+        length: result?.length,
+        firstItem: result?.[0]
+      })
+
+      eventRow = result?.[0]
       console.log('✅ Webhook event stored with ID:', eventRow?.id)
     } catch (dbError) {
       console.error('❌ Database insert failed:', dbError)
@@ -171,9 +178,20 @@ export async function POST(req: NextRequest) {
     }
 
     // Process Smartcar signals format
-    if (signals.length > 0 && eventRow && eventRow.id) {
+    if (signals.length > 0 && eventRow && eventRow.id && typeof eventRow.id === 'string') {
       console.log('💾 Processing signals from Smartcar format')
       console.log('📊 EventRow details:', { id: eventRow.id, type: typeof eventRow.id })
+      
+      // Double-check that eventRow.id exists before mapping
+      if (!eventRow.id) {
+        console.error('❌ eventRow.id is undefined, skipping signals processing')
+        return NextResponse.json({ 
+          ok: true, 
+          id: 'temp-' + Date.now(),
+          databaseStatus: 'failed',
+          error: 'eventRow.id is undefined'
+        })
+      }
       
       const signalEntries = signals.map((signal) => ({
         webhookEventId: eventRow.id,

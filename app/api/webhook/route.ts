@@ -171,8 +171,10 @@ export async function POST(req: NextRequest) {
     }
 
     // Process Smartcar signals format
-    if (signals.length > 0) {
+    if (signals.length > 0 && eventRow && eventRow.id) {
       console.log('💾 Processing signals from Smartcar format')
+      console.log('📊 EventRow details:', { id: eventRow.id, type: typeof eventRow.id })
+      
       const signalEntries = signals.map((signal) => ({
         webhookEventId: eventRow.id,
         vehicleId,
@@ -185,7 +187,7 @@ export async function POST(req: NextRequest) {
       console.log('📊 First few entries:', signalEntries.slice(0, 3))
 
       // Only try to store signals if we have a real database ID
-      if (eventRow.id && !eventRow.id.startsWith('temp-')) {
+      if (!eventRow.id.startsWith('temp-')) {
         try {
           await db.insert(signals).values(signalEntries)
           console.log('✅ Signals stored successfully:', signalEntries.length, 'entries')
@@ -196,10 +198,21 @@ export async function POST(req: NextRequest) {
       } else {
         console.log('⚠️ Skipping signals storage due to database issues')
       }
+    } else if (signals.length > 0) {
+      console.log('⚠️ Skipping signals processing - no valid eventRow or eventRow.id')
+      console.log('📊 EventRow status:', { 
+        hasEventRow: !!eventRow, 
+        hasId: !!(eventRow && eventRow.id),
+        eventRowType: typeof eventRow
+      })
     }
 
     console.log('🎉 Webhook processing completed successfully')
-    return NextResponse.json({ ok: true, id: eventRow.id })
+    return NextResponse.json({ 
+      ok: true, 
+      id: eventRow?.id || 'temp-' + Date.now(),
+      databaseStatus: eventRow?.id ? 'stored' : 'failed'
+    })
 
   } catch (error) {
     console.error('❌ Database error:', error)

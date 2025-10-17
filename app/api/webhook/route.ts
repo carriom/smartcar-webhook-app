@@ -83,44 +83,52 @@ export async function POST(req: NextRequest) {
 
   console.log('✅ Signature verified, processing webhook event')
 
-  const eventName: string = json.eventName
-  const vehicleId: string = json.vehicleId
-  const eventTimestamp: string = json.timestamp
-  const data: Record<string, unknown> = json.data || {}
+  // Handle Smartcar VEHICLE_STATE payload format
+  const eventType: string = json.eventType
+  const vehicleId: string = json.data?.vehicle?.id
+  const eventTimestamp: string = json.meta?.deliveredAt || new Date().toISOString()
+  const signals: any[] = json.data?.signals || []
 
   console.log('📊 Webhook event details:', {
-    eventName,
+    eventType,
     vehicleId,
     eventTimestamp,
-    dataKeys: Object.keys(data),
-    dataSize: JSON.stringify(data).length
+    signalsCount: signals.length,
+    hasVehicle: !!json.data?.vehicle,
+    hasUser: !!json.data?.user
   })
 
-  if (!eventName || !vehicleId || !eventTimestamp) {
+  if (!eventType || !vehicleId) {
     console.error('❌ Missing required fields:', {
-      hasEventName: !!eventName,
+      hasEventType: !!eventType,
       hasVehicleId: !!vehicleId,
-      hasEventTimestamp: !!eventTimestamp,
       receivedPayload: json
     })
     return NextResponse.json({ 
       error: 'missing fields',
-      required: ['eventName', 'vehicleId', 'timestamp'],
+      required: ['eventType', 'data.vehicle.id'],
       received: {
-        eventName,
+        eventType,
         vehicleId,
-        timestamp: eventTimestamp
+        hasData: !!json.data,
+        hasVehicle: !!json.data?.vehicle
       }
     }, { status: 400 })
   }
 
   try {
-    // Ensure vehicle exists
+    // Ensure vehicle exists with metadata
     console.log('🚗 Ensuring vehicle exists:', vehicleId)
     const existing = await db.select().from(vehicles).where(eq(vehicles.id, vehicleId)).limit(1)
     if (existing.length === 0) {
       console.log('➕ Creating new vehicle:', vehicleId)
-      await db.insert(vehicles).values({ id: vehicleId }).onConflictDoNothing()
+      const vehicleData = json.data?.vehicle || {}
+      await db.insert(vehicles).values({ 
+        id: vehicleId,
+        make: vehicleData.make,
+        model: vehicleData.model,
+        year: vehicleData.year
+      }).onConflictDoNothing()
     }
 
     console.log('💾 Storing webhook event')
@@ -128,7 +136,7 @@ export async function POST(req: NextRequest) {
       .insert(webhookEvents)
       .values({
         vehicleId,
-        eventName,
+        eventName: eventType,
         eventTimestamp: new Date(eventTimestamp),
         signatureValid: true,
         rawPayload: json,
@@ -137,21 +145,19 @@ export async function POST(req: NextRequest) {
 
     console.log('✅ Webhook event stored with ID:', eventRow.id)
 
-    const flattened = flattenData(data)
-    console.log('📈 Flattened signals:', flattened.length, 'entries')
+    // Process Smartcar signals format
+    if (signals.length > 0) {
+      console.log('💾 Storing signals from Smartcar format')
+      const signalEntries = signals.map((signal) => ({
+        webhookEventId: eventRow.id,
+        vehicleId,
+        signalPath: `${signal.group.toLowerCase()}.${signal.name.toLowerCase()}`,
+        value: signal.body?.value ? String(signal.body.value) : null,
+        unit: signal.body?.unit || null,
+      }))
 
-    if (flattened.length > 0) {
-      console.log('💾 Storing signals')
-      await db.insert(signals).values(
-        flattened.map((entry) => ({
-          webhookEventId: eventRow.id,
-          vehicleId,
-          signalPath: entry.path,
-          value: typeof entry.value === 'number' ? String(entry.value) : null,
-          unit: entry.unit,
-        }))
-      )
-      console.log('✅ Signals stored successfully')
+      await db.insert(signals).values(signalEntries)
+      console.log('✅ Signals stored successfully:', signalEntries.length, 'entries')
     }
 
     console.log('🎉 Webhook processing completed successfully')

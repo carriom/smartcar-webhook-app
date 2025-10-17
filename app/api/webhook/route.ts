@@ -216,9 +216,9 @@ export async function POST(req: NextRequest) {
       } catch (signalError) {
         console.error('❌ Failed to insert signals:', signalError)
         console.error('❌ Error details:', {
-          name: signalError.name,
-          message: signalError.message,
-          stack: signalError.stack
+          name: signalError instanceof Error ? signalError.name : 'Unknown',
+          message: signalError instanceof Error ? signalError.message : String(signalError),
+          stack: signalError instanceof Error ? signalError.stack : undefined
         })
         console.log('⚠️ Continuing without signals due to error')
       }

@@ -1,4 +1,4 @@
-2025-10-17T02:05:14.611Z [info] 🔔 Webhook received: {
+2025-10-17T02:17:54.794Z [info] 🔔 Webhook received: {
   method: 'POST',
   url: 'https://webhook-app-lake.vercel.app/api/webhook',
   headers: {
@@ -8,7 +8,7 @@
     connection: 'close',
     'content-length': '22207',
     'content-type': 'application/json',
-    forwarded: 'for=52.25.66.73;host=webhook-app-lake.vercel.app;proto=https;sig=0QmVhcmVyIDU2YmYyMjMzOWJkMjQxZDY5MzY2OWVhNWU4ZDM1NmU5MTBjNWEwNDgxNjE4YmJiYTBiODU1YWMzZmE2OWFiYzg=;exp=1760667014',
+    forwarded: 'for=52.25.66.73;host=webhook-app-lake.vercel.app;proto=https;sig=0QmVhcmVyIGVjYzIwNjhiNzM0NjFkMjc3MTE0ZTdiNmQ4ZjJiMTRkZTdiMzQ5Yjc0YjZhYzIxYjMwMjgwNmE4MDZjZjAzNmQ=;exp=1760667773',
     host: 'webhook-app-lake.vercel.app',
     'sc-signature': '333d02af32e6225ecc7291037fd69df8576ffd5d4b7f43012c536e77993728ae',
     'sentry-trace': 'b88d462d337149518d5bd0d8186d65c7-83d3dc36617ffd27',
@@ -19,13 +19,13 @@
     'x-forwarded-proto': 'https',
     'x-matched-path': '/api/webhook',
     'x-real-ip': '52.25.66.73',
-    'x-vercel-deployment-url': 'webhook-7n313rg1t-carrioms-projects.vercel.app',
+    'x-vercel-deployment-url': 'webhook-q9za74gl8-carrioms-projects.vercel.app',
     'x-vercel-forwarded-for': '52.25.66.73',
     'x-vercel-function-path': 'api/webhook',
-    'x-vercel-id': 'pdx1::n6zh9-1760666714037-5b83c24a2c49',
+    'x-vercel-id': 'pdx1::xm7sw-1760667473960-59e0ea6d3ba0',
     'x-vercel-internal-bot-check': 'skip',
     'x-vercel-internal-ingress-bucket': 'bucket018',
-    'x-vercel-internal-ingress-port': '18446',
+    'x-vercel-internal-ingress-port': '18443',
     'x-vercel-ip-as-number': '16509',
     'x-vercel-ip-city': 'Boardman',
     'x-vercel-ip-continent': 'NA',
@@ -38,22 +38,22 @@
     'x-vercel-ja4-digest': 't13d591100_a33745022dd6_dbd39dd1d406',
     'x-vercel-oidc-token': 'eyJraWQiOiJtcmstNDMwMmVjMWI2NzBmNDhhOThhZDYxZGFkZTRhMjNiZTciLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NjA2NjU4MjMsIm93bmVyX2lkIjoidGVhbV8zSmpicVVoTG9nUlZzQ2l1NzRGWVhyN0EiLCJpYXQiOjE3NjA2NjU4MjMsInZlcmNlbF9pZCI6InBkeDE6OnhqZ3NkLTE3NjA2NjU4MjM4MTgtYWRiMTkwYTUzN2FjIiwiYXVkIjoiaHR0cHM6XC9cL3ZlcmNlbC5jb21cL2NhcnJpb21zLXByb2plY3RzIiwib3duZXIiOiJjYXJyaW9tcy1wcm9qZWN0cyIsImlzcyI6Imh0dHBzOlwvXC9vaWRjLnZlcmNlbC5jb21cL2NhcnJpb21zLXByb2plY3RzIiwicHJvamVjdF9pZCI6InByal8yMlVTVGdmSDRDcWhlemFJVkxlZWZGdU50bUViIiwiZXhwIjoxNzYwNjY5NDIzLCJlbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJzY29wZSI6Im93bmVyOmNhcnJpb21zLXByb2plY3RzOnByb2plY3Q6d2ViaG9vay1hcHA6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInN1YiI6Im93bmVyOmNhcnJpb21zLXByb2plY3RzOnByb2plY3Q6d2ViaG9vay1hcHA6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInByb2plY3QiOiJ3ZWJob29rLWFwcCJ9.g6kNKW9VSNn8h7ybK3gvLwsm2O2QVVcktj3aSbMooVa_Nio1JfmQGidDkXuRcGkxeu3o7khsdRk5ttPkqZpPso5DUVxSVegQ9xOvQI7nfvOrDHUVXln2uUPKlSlZs4tM7DjRrm00iKt-uWnljwl42QX-y5osX9egGHrqYYF3txJToNgWQApaUpq4pOsYOI7eqOBKFWtiOPAPRCZfho8BS1707IcMRTvocI57tL59E6sP0R5AszQZUY85Bt1A_XCsaCFbbwG0WwwSojQNm-U26v_oSCTwqeeVBJ4N0CpXtsqJonss1DJnBpbQ6JvwUM8SBvUPCfp-P7faozKdSESZ4Q',
     'x-vercel-proxied-for': '52.25.66.73',
-    'x-vercel-proxy-signature': 'Bearer 56bf22339bd241d693669ea5e8d356e910c5a0481618bbba0b855ac3fa69abc8',
-    'x-vercel-proxy-signature-ts': '1760667014',
+    'x-vercel-proxy-signature': 'Bearer ecc2068b73461d277114e7b6d8f2b14de7b349b74b6ac21b302806a806cf036d',
+    'x-vercel-proxy-signature-ts': '1760667773',
     'x-vercel-sc-basepath': '',
-    'x-vercel-sc-headers': '{"x-vercel-function-platform":"vercel\\/proxy+serverless","x-vercel-ept":"1","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXBsb3ltZW50SWQiOiJkcGxfdXc1OHRuMjRleFUzWVpIRlN6VjJiaHdjS1k4ciIsInVubGltaXRlZCI6ZmFsc2UsInBsYW4iOiJob2JieSIsImlzcyI6InNlcnZlcmxlc3MiLCJkb21haW4iOiJ3ZWJob29rLWFwcC1sYWtlLnZlcmNlbC5hcHAiLCJibG9jayI6ZmFsc2UsImlhdCI6MTc2MDY2NjcxNCwicHJvamVjdElkIjoicHJqXzIyVVNUZ2ZINENxaGV6YUlWTGVlZkZ1TnRtRWIiLCJleHAiOjE3NjA2Njc2MzQsIm93bmVySWQiOiJ0ZWFtXzNKamJxVWhMb2dSVnNDaXU3NEZZWHI3QSIsInJlcXVlc3RJZCI6Im42emg5LTE3NjA2NjY3MTQwMzctNWI4M2MyNGEyYzQ5IiwiZW52IjoicHJvZHVjdGlvbiJ9.0pEosTI17XGK8oY_KF9URlynW-IWZFKso5NIf1j8Z7s"}',
+    'x-vercel-sc-headers': '{"x-vercel-function-platform":"vercel\\/proxy+serverless","x-vercel-ept":"1","Authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkZXBsb3ltZW50SWQiOiJkcGxfRE40NkRzbXNQemFjZTVCTW5LSlA2dVR2Y3BRUyIsInVubGltaXRlZCI6ZmFsc2UsInBsYW4iOiJob2JieSIsImlzcyI6InNlcnZlcmxlc3MiLCJkb21haW4iOiJ3ZWJob29rLWFwcC1sYWtlLnZlcmNlbC5hcHAiLCJibG9jayI6ZmFsc2UsImlhdCI6MTc2MDY2NzQ3NCwicHJvamVjdElkIjoicHJqXzIyVVNUZ2ZINENxaGV6YUlWTGVlZkZ1TnRtRWIiLCJleHAiOjE3NjA2NjgzOTQsIm93bmVySWQiOiJ0ZWFtXzNKamJxVWhMb2dSVnNDaXU3NEZZWHI3QSIsInJlcXVlc3RJZCI6InhtN3N3LTE3NjA2Njc0NzM5NjAtNTllMGVhNmQzYmEwIiwiZW52IjoicHJvZHVjdGlvbiJ9.UNTiho9Uq97YAU4KkGdzmjD0X9N2VviRQpvcWG-FY0A"}',
     'x-vercel-sc-host': 'iad1.suspense-cache.vercel-infra.com'
   },
-  timestamp: '2025-10-17T02:05:14.607Z'
+  timestamp: '2025-10-17T02:17:54.791Z'
 }
-2025-10-17T02:05:14.616Z [info] 📝 Request details: {
+2025-10-17T02:17:54.797Z [info] 📝 Request details: {
   bodyLength: 22207,
   hasSignature: true,
   hasSecret: true,
   contentType: 'application/json'
 }
-2025-10-17T02:05:14.617Z [info] 📄 Raw body: {"eventId":"8a79f1a0-c034-4e44-a8b7-eecb8d123908","eventType":"VEHICLE_STATE","data":{"user":{"id":"ad665721-94b2-488f-807c-2a6ee5a9891e"},"vehicle":{"id":"4f9214c5-2caa-4448-bc1e-2da0bd1e64d3","make":"Tesla","model":"Model 3","year":2020},"signals":[{"code":"internalcombustionengine-amountremaining","name":"AmountRemaining","group":"InternalCombustionEngine","body":{"value":42.5},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"internalcombustionengine-fuellevel","name":"FuelLevel","group":"InternalCombustionEngine","body":{"value":65},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"internalcombustionengine-oillife","name":"OilLife","group":"InternalCombustionEngine","body":{"value":72},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"internalcombustionengine-range","name":"Range","group":"InternalCombustionEngine","body":{"value":385},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"hvac-cabintargettemperature","name":"CabinTargetTemperature","group":"HVAC","body":{"value":22.5},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"hvac-iscabinhvacactive","name":"IsCabinHVACActive","group":"HVAC","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"hvac-isfrontdefrosteractive","name":"IsFrontDefrosterActive","group":"HVAC","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"hvac-isreardefrosteractive","name":"IsRearDefrosterActive","group":"HVAC","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"hvac-issteeringheateractive","name":"IsSteeringHeaterActive","group":"HVAC","body":{"value":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"connectivitystatus-isasleep","name":"IsAsleep","group":"ConnectivityStatus","body":{"value":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"connectivitystatus-isdigitalkeypaired","name":"IsDigitalKeyPaired","group":"ConnectivityStatus","body":{"value":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"connectivitystatus-isonline","name":"IsOnline","group":"ConnectivityStatus","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"connectivitysoftware-currentfirmwareversion","name":"CurrentFirmwareVersion","group":"ConnectivitySoftware","body":{"value":"2022.8.10.12"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleidentification-exteriorcolor","name":"ExteriorColor","group":"VehicleIdentification","body":{"value":"SolidBlack"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleidentification-nickname","name":"Nickname","group":"VehicleIdentification","body":{"value":"QueenLiz"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleidentification-packages","name":"Packages","group":"VehicleIdentification","body":{"values":["Base","MY2021"]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleidentification-trim","name":"Trim","group":"VehicleIdentification","body":{"value":"100D"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleidentification-vin","name":"VIN","group":"VehicleIdentification","body":{"value":"5YJSA1CN5DFP00101"},"meta":{"oemUpdatedAt":0,"retrievedAt":0}},{"code":"charge-amperage","name":"Amperage","group":"Charge","body":{"value":33},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-amperagemax","name":"AmperageMax","group":"Charge","body":{"value":48},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-amperagerequested","name":"AmperageRequested","group":"Charge","body":{"value":48},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargelimits","name":"ChargeLimits","group":"Charge","body":{"values":{"activeLimit":80,"values":[{"type":"GLOBAL","limit":80},{"type":"LOCATION","condition":{"name":"Home","address":"123 2nd street","latitude":90,"longitude":90},"limit":72},{"type":"CONNECTOR","condition":{"connectorType":"J1772"},"limit":52}]}},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargeportstatuscolor","name":"ChargePortStatusColor","group":"Charge","body":{"value":"Green"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargerate","name":"ChargeRate","group":"Charge","body":{"value":48},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargerecords","name":"ChargeRecords","group":"Charge","body":{"values":[{"startTime":"2023-10-15T19:30:00Z","endTime":"2023-10-16T06:45:00Z","startStateOfCharge":25,"endStateOfCharge":90,"energyAdded":65.2,"isPublicCharger":false,"connectorType":"J1772","cost":{"currency":"GBP","energyAmount":12.56,"otherAmount":0},"location":{"latitude":51.5014,"longitude":-0.1419,"name":"Home","address":"123 Park Lane, London SW1A 1AA"},"id":"CHG-20231015-A39B"}]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargerphases","name":"ChargerPhases","group":"Charge","body":{"value":3},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargetimers","name":"ChargeTimers","group":"Charge","body":{"values":[{"type":"GLOBAL","isOEMOptimizationEnabled":true,"schedules":[{"days":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"start":"23:00:00","end":"07:00:00"}],"departureTimers":[{"days":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"time":"08:30:00"}]},{"type":"location","condition":{"latitude":51.5014,"longitude":-0.1419,"name":"Home","address":"123 Main St, London"},"isOEMOptimizationEnabled":true,"schedules":[{"days":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"start":"22:00:00","end":"06:00:00"}],"departureTimers":[{"days":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"time":"08:00:00"}]},{"type":"CONNECTOR","condition":{"connectorType":"J1772"},"isOEMOptimizationEnabled":true,"schedules":[{"days":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"start":"22:00:00","end":"06:00:00"}],"departureTimers":[{"days":["MONDAY","TUESDAY"],"time":"08:00:00"}]}]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargingconnectortype","name":"ChargingConnectorType","group":"Charge","body":{"value":"J1772"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-detailedchargingstatus","name":"DetailedChargingStatus","group":"Charge","body":{"value":"CHARGING"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-energyadded","name":"EnergyAdded","group":"Charge","body":{"value":35.6},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-fastchargertype","name":"FastChargerType","group":"Charge","body":{"value":"CCS"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-ischarging","name":"IsCharging","group":"Charge","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-ischargingcableconnected","name":"IsChargingCableConnected","group":"Charge","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-ischargingcablelatched","name":"IsChargingCableLatched","group":"Charge","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-ischargingportflapopen","name":"IsChargingPortFlapOpen","group":"Charge","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-isfastchargerpresent","name":"IsFastChargerPresent","group":"Charge","body":{"value":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-timetocomplete","name":"TimeToComplete","group":"Charge","body":{"value":100},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-voltage","name":"Voltage","group":"Charge","body":{"value":240},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-wattage","name":"Wattage","group":"Charge","body":{"value":10.7},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"climate-externaltemperature","name":"ExternalTemperature","group":"Climate","body":{"value":14.5},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"climate-internaltemperature","name":"InternalTemperature","group":"Climate","body":{"value":21},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-doors","name":"Doors","group":"Closure","body":{"values":{"rowCount":2,"columnCount":2,"doors":[{"row":0,"column":0,"isOpen":false,"isLocked":true},{"row":0,"column":1,"isOpen":false,"isLocked":true},{"row":1,"column":0,"isOpen":false,"isLocked":true},{"row":1,"column":1,"isOpen":false,"isLocked":true}]}},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-enginecover","name":"EngineCover","group":"Closure","body":{"isOpen":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-fronttrunk","name":"FrontTrunk","group":"Closure","body":{"isLocked":true,"isOpen":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-islocked","name":"IsLocked","group":"Closure","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-reartrunk","name":"RearTrunk","group":"Closure","body":{"isLocked":true,"isOpen":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-sunroof","name":"Sunroof","group":"Closure","body":{"isOpen":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-tailgate","name":"Tailgate","group":"Closure","body":{"isLocked":true,"isOpen":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-windows","name":"Windows","group":"Closure","body":{"values":{"rowCount":2,"columnCount":2,"windows":[{"row":0,"column":0,"isOpen":false},{"row":0,"column":1,"isOpen":false},{"row":1,"column":0,"isOpen":false},{"row":1,"column":1,"isOpen":false}]}},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"location-isathome","name":"IsAtHome","group":"Location","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"location-preciselocation","name":"PreciseLocation","group":"Location","body":{"latitude":51.5014,"longitude":-0.1419,"direction":"NE","heading":45.3,"locationType":"PARKED"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"lowvoltagebattery-stateofcharge","name":"StateOfCharge","group":"LowVoltageBattery","body":{"value":95},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"lowvoltagebattery-status","name":"Status","group":"LowVoltageBattery","body":{"value":"GOOD"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"motion-currentspeed","name":"CurrentSpeed","group":"Motion","body":{"value":37},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"odometer-traveleddistance","name":"TraveledDistance","group":"Odometer","body":{"value":78432},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"service-isinservice","name":"IsInService","group":"Service","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"service-records","name":"Records","group":"Service","body":{"values":[{"id":"SVC-20230427-001","time":"2023-04-27T10:30:00Z","odometer":45231,"tasks":[{"id":"task-001","description":"Oil change"}],"details":[{"id":"detail-001","description":"Used synthetic oil"}],"cost":{"currency":"USD","amount":349.95}}]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"surveillance-isenabled","name":"IsEnabled","group":"Surveillance","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"tractionbattery-isheateractive","name":"IsHeaterActive","group":"TractionBattery","body":{"value":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"tractionbattery-maxrangechargecounter","name":"MaxRangeChargeCounter","group":"TractionBattery","body":{"value":42},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"tractionbattery-nominalcapacity","name":"NominalCapacity","group":"TractionBattery","body":{"source":"SMARTCAR","capacity":75,"availbableCapacities":[{"capacity":55,"description":"Standard Range"},{"capacity":75,"description":"Long Range"},{"capacity":100,"description":"Performance"}]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"tractionbattery-range","name":"Range","group":"TractionBattery","body":{"value":123.45,"type":"DEFAULT","additionalValues":[{"type":"IDEAL_CONDITIONS","value":150},{"type":"ESTIMATED","value":140.75},{"type":"RATED","value":130.25}]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"tractionbattery-stateofcharge","name":"StateOfCharge","group":"TractionBattery","body":{"value":78},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"transmission-drivemode","name":"DriveMode","group":"Transmission","body":{"canonical":"NORMAL","oemDisplayName":"everyday"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"transmission-gearstate","name":"GearState","group":"Transmission","body":{"value":"DRIVE"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleuseraccount-permissions","name":"Permissions","group":"VehicleUserAccount","body":{"values":["vehicle_cmds","vehicle_device_data"]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleuseraccount-role","name":"Role","group":"VehicleUserAccount","body":{"value":"Driver"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"wheel-tires","name":"Tires","group":"Wheel","body":{"values":{"rowCount":2,"columnCount":2,"values":[{"row":0,"column":0,"tirePressure":2.4},{"row":0,"column":1,"tirePressure":2.4},{"row":1,"column":0,"tirePressure":2.6},{"row":1,"column":1,"tirePressure":2.6}]}},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}}]},"triggers":[{"type":"SIGNAL_UPDATED","signal":{"name":"Amperage","code":"charge-amperage","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"AmperageMax","code":"charge-amperagemax","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"AmperageRequested","code":"charge-amperagerequested","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargeLimits","code":"charge-chargelimits","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargePortStatusColor","code":"charge-chargeportstatuscolor","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargeRate","code":"charge-chargerate","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargeRecords","code":"charge-chargerecords","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargerPhases","code":"charge-chargerphases","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargeTimers","code":"charge-chargetimers","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargingConnectorType","code":"charge-chargingconnectortype","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"DetailedChargingStatus","code":"charge-detailedchargingstatus","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"EnergyAdded","code":"charge-energyadded","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"FastChargerType","code":"charge-fastchargertype","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsCharging","code":"charge-ischarging","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsChargingCableConnected","code":"charge-ischargingcableconnected","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsChargingCableLatched","code":"charge-ischargingcablelatched","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsChargingPortFlapOpen","code":"charge-ischargingportflapopen","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsFastChargerPresent","code":"charge-isfastchargerpresent","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"TimeToComplete","code":"charge-timetocomplete","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Voltage","code":"charge-voltage","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Wattage","code":"charge-wattage","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ExternalTemperature","code":"climate-externaltemperature","group":"Climate"}},{"type":"SIGNAL_UPDATED","signal":{"name":"InternalTemperature","code":"climate-internaltemperature","group":"Climate"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Doors","code":"closure-doors","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"EngineCover","code":"closure-enginecover","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"FrontTrunk","code":"closure-fronttrunk","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsLocked","code":"closure-islocked","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"RearTrunk","code":"closure-reartrunk","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Sunroof","code":"closure-sunroof","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Tailgate","code":"closure-tailgate","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Windows","code":"closure-windows","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsAtHome","code":"location-isathome","group":"Location"}},{"type":"SIGNAL_UPDATED","signal":{"name":"PreciseLocation","code":"location-preciselocation","group":"Location"}},{"type":"SIGNAL_UPDATED","signal":{"name":"StateOfCharge","code":"lowvoltagebattery-stateofcharge","group":"LowVoltageBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Status","code":"lowvoltagebattery-status","group":"LowVoltageBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"CurrentSpeed","code":"motion-currentspeed","group":"Motion"}},{"type":"SIGNAL_UPDATED","signal":{"name":"TraveledDistance","code":"odometer-traveleddistance","group":"Odometer"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsInService","code":"service-isinservice","group":"Service"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Records","code":"service-records","group":"Service"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsEnabled","code":"surveillance-isenabled","group":"Surveillance"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsHeaterActive","code":"tractionbattery-isheateractive","group":"TractionBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"MaxRangeChargeCounter","code":"tractionbattery-maxrangechargecounter","group":"TractionBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"NominalCapacity","code":"tractionbattery-nominalcapacity","group":"TractionBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Range","code":"tractionbattery-range","group":"TractionBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"StateOfCharge","code":"tractionbattery-stateofcharge","group":"TractionBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"DriveMode","code":"transmission-drivemode","group":"Transmission"}},{"type":"SIGNAL_UPDATED","signal":{"name":"GearState","code":"transmission-gearstate","group":"Transmission"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Permissions","code":"vehicleuseraccount-permissions","group":"VehicleUserAccount"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Role","code":"vehicleuseraccount-role","group":"VehicleUserAccount"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Tires","code":"wheel-tires","group":"Wheel"}},{"type":"SIGNAL_UPDATED","signal":{"name":"CabinTargetTemperature","code":"hvac-cabintargettemperature","group":"Hvac"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsCabinHvacActive","code":"hvac-iscabinhvacactive","group":"Hvac"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsFrontDefrosterActive","code":"hvac-isfrontdefrosteractive","group":"Hvac"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsRearDefrosterActive","code":"hvac-isreardefrosteractive","group":"Hvac"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsSteeringHeaterActive","code":"hvac-issteeringheateractive","group":"Hvac"}},{"type":"SIGNAL_UPDATED","signal":{"name":"AmountRemaining","code":"internalcombustionengine-amountremaining","group":"InternalCombustionEngine"}},{"type":"SIGNAL_UPDATED","signal":{"name":"FuelLevel","code":"internalcombustionengine-fuellevel","group":"InternalCombustionEngine"}},{"type":"SIGNAL_UPDATED","signal":{"name":"OilLife","code":"internalcombustionengine-oillife","group":"InternalCombustionEngine"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Range","code":"internalcombustionengine-range","group":"InternalCombustionEngine"}},{"type":"SIGNAL_UPDATED","signal":{"name":"CurrentFirmwareVersion","code":"connectivitysoftware-currentfirmwareversion","group":"ConnectivitySoftware"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsAsleep","code":"connectivitystatus-isasleep","group":"ConnectivityStatus"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsDigitalKeyPaired","code":"connectivitystatus-isdigitalkeypaired","group":"ConnectivityStatus"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsOnline","code":"connectivitystatus-isonline","group":"ConnectivityStatus"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Nickname","code":"vehicleidentification-nickname","group":"VehicleIdentification"}}],"meta":{"version":"4.0","webhookId":"cdf56042-22a9-425a-9faf-4bb0d89d1884","webhookName":"Demo App","deliveryId":"43482cdc-68a3-494d-bad3-54f26e9c0965","deliveredAt":"2025-10-17T01:38:11.694Z","mode":"TEST","signalCount":68}}
-2025-10-17T02:05:14.619Z [info] ✅ Parsed JSON: {
+2025-10-17T02:17:54.799Z [info] 📄 Raw body: {"eventId":"8a79f1a0-c034-4e44-a8b7-eecb8d123908","eventType":"VEHICLE_STATE","data":{"user":{"id":"ad665721-94b2-488f-807c-2a6ee5a9891e"},"vehicle":{"id":"4f9214c5-2caa-4448-bc1e-2da0bd1e64d3","make":"Tesla","model":"Model 3","year":2020},"signals":[{"code":"internalcombustionengine-amountremaining","name":"AmountRemaining","group":"InternalCombustionEngine","body":{"value":42.5},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"internalcombustionengine-fuellevel","name":"FuelLevel","group":"InternalCombustionEngine","body":{"value":65},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"internalcombustionengine-oillife","name":"OilLife","group":"InternalCombustionEngine","body":{"value":72},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"internalcombustionengine-range","name":"Range","group":"InternalCombustionEngine","body":{"value":385},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"hvac-cabintargettemperature","name":"CabinTargetTemperature","group":"HVAC","body":{"value":22.5},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"hvac-iscabinhvacactive","name":"IsCabinHVACActive","group":"HVAC","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"hvac-isfrontdefrosteractive","name":"IsFrontDefrosterActive","group":"HVAC","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"hvac-isreardefrosteractive","name":"IsRearDefrosterActive","group":"HVAC","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"hvac-issteeringheateractive","name":"IsSteeringHeaterActive","group":"HVAC","body":{"value":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"connectivitystatus-isasleep","name":"IsAsleep","group":"ConnectivityStatus","body":{"value":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"connectivitystatus-isdigitalkeypaired","name":"IsDigitalKeyPaired","group":"ConnectivityStatus","body":{"value":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"connectivitystatus-isonline","name":"IsOnline","group":"ConnectivityStatus","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"connectivitysoftware-currentfirmwareversion","name":"CurrentFirmwareVersion","group":"ConnectivitySoftware","body":{"value":"2022.8.10.12"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleidentification-exteriorcolor","name":"ExteriorColor","group":"VehicleIdentification","body":{"value":"SolidBlack"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleidentification-nickname","name":"Nickname","group":"VehicleIdentification","body":{"value":"QueenLiz"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleidentification-packages","name":"Packages","group":"VehicleIdentification","body":{"values":["Base","MY2021"]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleidentification-trim","name":"Trim","group":"VehicleIdentification","body":{"value":"100D"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleidentification-vin","name":"VIN","group":"VehicleIdentification","body":{"value":"5YJSA1CN5DFP00101"},"meta":{"oemUpdatedAt":0,"retrievedAt":0}},{"code":"charge-amperage","name":"Amperage","group":"Charge","body":{"value":33},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-amperagemax","name":"AmperageMax","group":"Charge","body":{"value":48},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-amperagerequested","name":"AmperageRequested","group":"Charge","body":{"value":48},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargelimits","name":"ChargeLimits","group":"Charge","body":{"values":{"activeLimit":80,"values":[{"type":"GLOBAL","limit":80},{"type":"LOCATION","condition":{"name":"Home","address":"123 2nd street","latitude":90,"longitude":90},"limit":72},{"type":"CONNECTOR","condition":{"connectorType":"J1772"},"limit":52}]}},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargeportstatuscolor","name":"ChargePortStatusColor","group":"Charge","body":{"value":"Green"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargerate","name":"ChargeRate","group":"Charge","body":{"value":48},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargerecords","name":"ChargeRecords","group":"Charge","body":{"values":[{"startTime":"2023-10-15T19:30:00Z","endTime":"2023-10-16T06:45:00Z","startStateOfCharge":25,"endStateOfCharge":90,"energyAdded":65.2,"isPublicCharger":false,"connectorType":"J1772","cost":{"currency":"GBP","energyAmount":12.56,"otherAmount":0},"location":{"latitude":51.5014,"longitude":-0.1419,"name":"Home","address":"123 Park Lane, London SW1A 1AA"},"id":"CHG-20231015-A39B"}]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargerphases","name":"ChargerPhases","group":"Charge","body":{"value":3},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargetimers","name":"ChargeTimers","group":"Charge","body":{"values":[{"type":"GLOBAL","isOEMOptimizationEnabled":true,"schedules":[{"days":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"start":"23:00:00","end":"07:00:00"}],"departureTimers":[{"days":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"time":"08:30:00"}]},{"type":"location","condition":{"latitude":51.5014,"longitude":-0.1419,"name":"Home","address":"123 Main St, London"},"isOEMOptimizationEnabled":true,"schedules":[{"days":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"start":"22:00:00","end":"06:00:00"}],"departureTimers":[{"days":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"time":"08:00:00"}]},{"type":"CONNECTOR","condition":{"connectorType":"J1772"},"isOEMOptimizationEnabled":true,"schedules":[{"days":["MONDAY","TUESDAY","WEDNESDAY","THURSDAY","FRIDAY"],"start":"22:00:00","end":"06:00:00"}],"departureTimers":[{"days":["MONDAY","TUESDAY"],"time":"08:00:00"}]}]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-chargingconnectortype","name":"ChargingConnectorType","group":"Charge","body":{"value":"J1772"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-detailedchargingstatus","name":"DetailedChargingStatus","group":"Charge","body":{"value":"CHARGING"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-energyadded","name":"EnergyAdded","group":"Charge","body":{"value":35.6},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-fastchargertype","name":"FastChargerType","group":"Charge","body":{"value":"CCS"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-ischarging","name":"IsCharging","group":"Charge","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-ischargingcableconnected","name":"IsChargingCableConnected","group":"Charge","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-ischargingcablelatched","name":"IsChargingCableLatched","group":"Charge","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-ischargingportflapopen","name":"IsChargingPortFlapOpen","group":"Charge","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-isfastchargerpresent","name":"IsFastChargerPresent","group":"Charge","body":{"value":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-timetocomplete","name":"TimeToComplete","group":"Charge","body":{"value":100},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-voltage","name":"Voltage","group":"Charge","body":{"value":240},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"charge-wattage","name":"Wattage","group":"Charge","body":{"value":10.7},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"climate-externaltemperature","name":"ExternalTemperature","group":"Climate","body":{"value":14.5},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"climate-internaltemperature","name":"InternalTemperature","group":"Climate","body":{"value":21},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-doors","name":"Doors","group":"Closure","body":{"values":{"rowCount":2,"columnCount":2,"doors":[{"row":0,"column":0,"isOpen":false,"isLocked":true},{"row":0,"column":1,"isOpen":false,"isLocked":true},{"row":1,"column":0,"isOpen":false,"isLocked":true},{"row":1,"column":1,"isOpen":false,"isLocked":true}]}},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-enginecover","name":"EngineCover","group":"Closure","body":{"isOpen":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-fronttrunk","name":"FrontTrunk","group":"Closure","body":{"isLocked":true,"isOpen":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-islocked","name":"IsLocked","group":"Closure","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-reartrunk","name":"RearTrunk","group":"Closure","body":{"isLocked":true,"isOpen":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-sunroof","name":"Sunroof","group":"Closure","body":{"isOpen":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-tailgate","name":"Tailgate","group":"Closure","body":{"isLocked":true,"isOpen":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"closure-windows","name":"Windows","group":"Closure","body":{"values":{"rowCount":2,"columnCount":2,"windows":[{"row":0,"column":0,"isOpen":false},{"row":0,"column":1,"isOpen":false},{"row":1,"column":0,"isOpen":false},{"row":1,"column":1,"isOpen":false}]}},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"location-isathome","name":"IsAtHome","group":"Location","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"location-preciselocation","name":"PreciseLocation","group":"Location","body":{"latitude":51.5014,"longitude":-0.1419,"direction":"NE","heading":45.3,"locationType":"PARKED"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"lowvoltagebattery-stateofcharge","name":"StateOfCharge","group":"LowVoltageBattery","body":{"value":95},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"lowvoltagebattery-status","name":"Status","group":"LowVoltageBattery","body":{"value":"GOOD"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"motion-currentspeed","name":"CurrentSpeed","group":"Motion","body":{"value":37},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"odometer-traveleddistance","name":"TraveledDistance","group":"Odometer","body":{"value":78432},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"service-isinservice","name":"IsInService","group":"Service","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"service-records","name":"Records","group":"Service","body":{"values":[{"id":"SVC-20230427-001","time":"2023-04-27T10:30:00Z","odometer":45231,"tasks":[{"id":"task-001","description":"Oil change"}],"details":[{"id":"detail-001","description":"Used synthetic oil"}],"cost":{"currency":"USD","amount":349.95}}]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"surveillance-isenabled","name":"IsEnabled","group":"Surveillance","body":{"value":true},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"tractionbattery-isheateractive","name":"IsHeaterActive","group":"TractionBattery","body":{"value":false},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"tractionbattery-maxrangechargecounter","name":"MaxRangeChargeCounter","group":"TractionBattery","body":{"value":42},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"tractionbattery-nominalcapacity","name":"NominalCapacity","group":"TractionBattery","body":{"source":"SMARTCAR","capacity":75,"availbableCapacities":[{"capacity":55,"description":"Standard Range"},{"capacity":75,"description":"Long Range"},{"capacity":100,"description":"Performance"}]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"tractionbattery-range","name":"Range","group":"TractionBattery","body":{"value":123.45,"type":"DEFAULT","additionalValues":[{"type":"IDEAL_CONDITIONS","value":150},{"type":"ESTIMATED","value":140.75},{"type":"RATED","value":130.25}]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"tractionbattery-stateofcharge","name":"StateOfCharge","group":"TractionBattery","body":{"value":78},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"transmission-drivemode","name":"DriveMode","group":"Transmission","body":{"canonical":"NORMAL","oemDisplayName":"everyday"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"transmission-gearstate","name":"GearState","group":"Transmission","body":{"value":"DRIVE"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleuseraccount-permissions","name":"Permissions","group":"VehicleUserAccount","body":{"values":["vehicle_cmds","vehicle_device_data"]},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"vehicleuseraccount-role","name":"Role","group":"VehicleUserAccount","body":{"value":"Driver"},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}},{"code":"wheel-tires","name":"Tires","group":"Wheel","body":{"values":{"rowCount":2,"columnCount":2,"values":[{"row":0,"column":0,"tirePressure":2.4},{"row":0,"column":1,"tirePressure":2.4},{"row":1,"column":0,"tirePressure":2.6},{"row":1,"column":1,"tirePressure":2.6}]}},"meta":{"oemUpdatedAt":1760665091694,"retrievedAt":1760665091694}}]},"triggers":[{"type":"SIGNAL_UPDATED","signal":{"name":"Amperage","code":"charge-amperage","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"AmperageMax","code":"charge-amperagemax","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"AmperageRequested","code":"charge-amperagerequested","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargeLimits","code":"charge-chargelimits","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargePortStatusColor","code":"charge-chargeportstatuscolor","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargeRate","code":"charge-chargerate","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargeRecords","code":"charge-chargerecords","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargerPhases","code":"charge-chargerphases","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargeTimers","code":"charge-chargetimers","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ChargingConnectorType","code":"charge-chargingconnectortype","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"DetailedChargingStatus","code":"charge-detailedchargingstatus","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"EnergyAdded","code":"charge-energyadded","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"FastChargerType","code":"charge-fastchargertype","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsCharging","code":"charge-ischarging","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsChargingCableConnected","code":"charge-ischargingcableconnected","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsChargingCableLatched","code":"charge-ischargingcablelatched","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsChargingPortFlapOpen","code":"charge-ischargingportflapopen","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsFastChargerPresent","code":"charge-isfastchargerpresent","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"TimeToComplete","code":"charge-timetocomplete","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Voltage","code":"charge-voltage","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Wattage","code":"charge-wattage","group":"Charge"}},{"type":"SIGNAL_UPDATED","signal":{"name":"ExternalTemperature","code":"climate-externaltemperature","group":"Climate"}},{"type":"SIGNAL_UPDATED","signal":{"name":"InternalTemperature","code":"climate-internaltemperature","group":"Climate"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Doors","code":"closure-doors","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"EngineCover","code":"closure-enginecover","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"FrontTrunk","code":"closure-fronttrunk","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsLocked","code":"closure-islocked","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"RearTrunk","code":"closure-reartrunk","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Sunroof","code":"closure-sunroof","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Tailgate","code":"closure-tailgate","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Windows","code":"closure-windows","group":"Closure"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsAtHome","code":"location-isathome","group":"Location"}},{"type":"SIGNAL_UPDATED","signal":{"name":"PreciseLocation","code":"location-preciselocation","group":"Location"}},{"type":"SIGNAL_UPDATED","signal":{"name":"StateOfCharge","code":"lowvoltagebattery-stateofcharge","group":"LowVoltageBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Status","code":"lowvoltagebattery-status","group":"LowVoltageBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"CurrentSpeed","code":"motion-currentspeed","group":"Motion"}},{"type":"SIGNAL_UPDATED","signal":{"name":"TraveledDistance","code":"odometer-traveleddistance","group":"Odometer"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsInService","code":"service-isinservice","group":"Service"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Records","code":"service-records","group":"Service"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsEnabled","code":"surveillance-isenabled","group":"Surveillance"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsHeaterActive","code":"tractionbattery-isheateractive","group":"TractionBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"MaxRangeChargeCounter","code":"tractionbattery-maxrangechargecounter","group":"TractionBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"NominalCapacity","code":"tractionbattery-nominalcapacity","group":"TractionBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Range","code":"tractionbattery-range","group":"TractionBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"StateOfCharge","code":"tractionbattery-stateofcharge","group":"TractionBattery"}},{"type":"SIGNAL_UPDATED","signal":{"name":"DriveMode","code":"transmission-drivemode","group":"Transmission"}},{"type":"SIGNAL_UPDATED","signal":{"name":"GearState","code":"transmission-gearstate","group":"Transmission"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Permissions","code":"vehicleuseraccount-permissions","group":"VehicleUserAccount"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Role","code":"vehicleuseraccount-role","group":"VehicleUserAccount"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Tires","code":"wheel-tires","group":"Wheel"}},{"type":"SIGNAL_UPDATED","signal":{"name":"CabinTargetTemperature","code":"hvac-cabintargettemperature","group":"Hvac"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsCabinHvacActive","code":"hvac-iscabinhvacactive","group":"Hvac"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsFrontDefrosterActive","code":"hvac-isfrontdefrosteractive","group":"Hvac"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsRearDefrosterActive","code":"hvac-isreardefrosteractive","group":"Hvac"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsSteeringHeaterActive","code":"hvac-issteeringheateractive","group":"Hvac"}},{"type":"SIGNAL_UPDATED","signal":{"name":"AmountRemaining","code":"internalcombustionengine-amountremaining","group":"InternalCombustionEngine"}},{"type":"SIGNAL_UPDATED","signal":{"name":"FuelLevel","code":"internalcombustionengine-fuellevel","group":"InternalCombustionEngine"}},{"type":"SIGNAL_UPDATED","signal":{"name":"OilLife","code":"internalcombustionengine-oillife","group":"InternalCombustionEngine"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Range","code":"internalcombustionengine-range","group":"InternalCombustionEngine"}},{"type":"SIGNAL_UPDATED","signal":{"name":"CurrentFirmwareVersion","code":"connectivitysoftware-currentfirmwareversion","group":"ConnectivitySoftware"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsAsleep","code":"connectivitystatus-isasleep","group":"ConnectivityStatus"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsDigitalKeyPaired","code":"connectivitystatus-isdigitalkeypaired","group":"ConnectivityStatus"}},{"type":"SIGNAL_UPDATED","signal":{"name":"IsOnline","code":"connectivitystatus-isonline","group":"ConnectivityStatus"}},{"type":"SIGNAL_UPDATED","signal":{"name":"Nickname","code":"vehicleidentification-nickname","group":"VehicleIdentification"}}],"meta":{"version":"4.0","webhookId":"cdf56042-22a9-425a-9faf-4bb0d89d1884","webhookName":"Demo App","deliveryId":"43482cdc-68a3-494d-bad3-54f26e9c0965","deliveredAt":"2025-10-17T01:38:11.694Z","mode":"TEST","signalCount":68}}
+2025-10-17T02:17:54.801Z [info] ✅ Parsed JSON: {
   "eventId": "8a79f1a0-c034-4e44-a8b7-eecb8d123908",
   "eventType": "VEHICLE_STATE",
   "data": {
@@ -1695,9 +1695,9 @@
     "signalCount": 68
   }
 }
-2025-10-17T02:05:14.619Z [info] 🔍 Verifying signature for webhook event
-2025-10-17T02:05:14.619Z [info] ✅ Signature verified, processing webhook event
-2025-10-17T02:05:14.619Z [info] 📊 Webhook event details: {
+2025-10-17T02:17:54.801Z [info] 🔍 Verifying signature for webhook event
+2025-10-17T02:17:54.801Z [info] ✅ Signature verified, processing webhook event
+2025-10-17T02:17:54.801Z [info] 📊 Webhook event details: {
   eventType: 'VEHICLE_STATE',
   vehicleId: '4f9214c5-2caa-4448-bc1e-2da0bd1e64d3',
   eventTimestamp: '2025-10-17T01:38:11.694Z',
@@ -1705,25 +1705,25 @@
   hasVehicle: true,
   hasUser: true
 }
-2025-10-17T02:05:14.619Z [info] 🚗 Ensuring vehicle exists: 4f9214c5-2caa-4448-bc1e-2da0bd1e64d3
-2025-10-17T02:05:15.083Z [info] 💾 Storing webhook event
-2025-10-17T02:05:15.084Z [info] 📝 Event data: {
+2025-10-17T02:17:54.801Z [info] 🚗 Ensuring vehicle exists: 4f9214c5-2caa-4448-bc1e-2da0bd1e64d3
+2025-10-17T02:17:55.122Z [info] 💾 Storing webhook event
+2025-10-17T02:17:55.123Z [info] 📝 Event data: {
   vehicleId: '4f9214c5-2caa-4448-bc1e-2da0bd1e64d3',
   eventName: 'VEHICLE_STATE',
   eventTimestamp: 2025-10-17T01:38:11.694Z,
   signatureValid: true,
   payloadSize: 22207
 }
-2025-10-17T02:05:15.104Z [info] 📊 Database insert result: {
+2025-10-17T02:17:55.139Z [info] 📊 Database insert result: {
   resultType: 'object',
   isArray: true,
   length: 1,
   firstItem: {
-    id: 'a83eb45a-fc39-47d0-a316-8bb0a583c3fb',
+    id: 'aaac7fd6-6071-426e-81b1-a9a6ba094b47',
     vehicleId: '4f9214c5-2caa-4448-bc1e-2da0bd1e64d3',
     eventName: 'VEHICLE_STATE',
     eventTimestamp: 2025-10-17T01:38:11.694Z,
-    receivedAt: 2025-10-17T02:05:15.090Z,
+    receivedAt: 2025-10-17T02:17:55.127Z,
     signatureValid: true,
     rawPayload: {
       data: [Object],
@@ -1734,281 +1734,281 @@
     }
   }
 }
-2025-10-17T02:05:15.104Z [info] ✅ Webhook event stored with ID: a83eb45a-fc39-47d0-a316-8bb0a583c3fb
-2025-10-17T02:05:15.104Z [info] 💾 Processing signals with individual insertion approach
-2025-10-17T02:05:15.104Z [info] 📊 EventRow details: { id: 'a83eb45a-fc39-47d0-a316-8bb0a583c3fb', type: 'string' }
-2025-10-17T02:05:15.104Z [info] 🔍 Processing signals one by one to avoid array issues...
-2025-10-17T02:05:15.105Z [error] ❌ Failed to insert signal 0: {
+2025-10-17T02:17:55.139Z [info] ✅ Webhook event stored with ID: aaac7fd6-6071-426e-81b1-a9a6ba094b47
+2025-10-17T02:17:55.139Z [info] 💾 Processing signals with individual insertion approach
+2025-10-17T02:17:55.139Z [info] 📊 EventRow details: { id: 'aaac7fd6-6071-426e-81b1-a9a6ba094b47', type: 'string' }
+2025-10-17T02:17:55.139Z [info] 🔍 Processing signals one by one to avoid array issues...
+2025-10-17T02:17:55.139Z [error] ❌ Failed to insert signal 0: {
   signal: { group: 'InternalCombustionEngine', name: 'AmountRemaining' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.105Z [error] ❌ Failed to insert signal 1: {
+2025-10-17T02:17:55.139Z [error] ❌ Failed to insert signal 1: {
   signal: { group: 'InternalCombustionEngine', name: 'FuelLevel' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.105Z [error] ❌ Failed to insert signal 2: {
+2025-10-17T02:17:55.139Z [error] ❌ Failed to insert signal 2: {
   signal: { group: 'InternalCombustionEngine', name: 'OilLife' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.105Z [error] ❌ Failed to insert signal 3: {
+2025-10-17T02:17:55.140Z [error] ❌ Failed to insert signal 3: {
   signal: { group: 'InternalCombustionEngine', name: 'Range' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.106Z [error] ❌ Failed to insert signal 4: {
+2025-10-17T02:17:55.140Z [error] ❌ Failed to insert signal 4: {
   signal: { group: 'HVAC', name: 'CabinTargetTemperature' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.106Z [error] ❌ Failed to insert signal 5: {
+2025-10-17T02:17:55.140Z [error] ❌ Failed to insert signal 5: {
   signal: { group: 'HVAC', name: 'IsCabinHVACActive' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.106Z [error] ❌ Failed to insert signal 6: {
+2025-10-17T02:17:55.140Z [error] ❌ Failed to insert signal 6: {
   signal: { group: 'HVAC', name: 'IsFrontDefrosterActive' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.106Z [error] ❌ Failed to insert signal 7: {
+2025-10-17T02:17:55.140Z [error] ❌ Failed to insert signal 7: {
   signal: { group: 'HVAC', name: 'IsRearDefrosterActive' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.106Z [error] ❌ Failed to insert signal 8: {
+2025-10-17T02:17:55.140Z [error] ❌ Failed to insert signal 8: {
   signal: { group: 'HVAC', name: 'IsSteeringHeaterActive' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.106Z [error] ❌ Failed to insert signal 9: {
+2025-10-17T02:17:55.140Z [error] ❌ Failed to insert signal 9: {
   signal: { group: 'ConnectivityStatus', name: 'IsAsleep' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.107Z [error] ❌ Failed to insert signal 10: {
+2025-10-17T02:17:55.141Z [error] ❌ Failed to insert signal 10: {
   signal: { group: 'ConnectivityStatus', name: 'IsDigitalKeyPaired' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.107Z [error] ❌ Failed to insert signal 11: {
+2025-10-17T02:17:55.141Z [error] ❌ Failed to insert signal 11: {
   signal: { group: 'ConnectivityStatus', name: 'IsOnline' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.107Z [error] ❌ Failed to insert signal 12: {
+2025-10-17T02:17:55.141Z [error] ❌ Failed to insert signal 12: {
   signal: { group: 'ConnectivitySoftware', name: 'CurrentFirmwareVersion' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.107Z [error] ❌ Failed to insert signal 13: {
+2025-10-17T02:17:55.141Z [error] ❌ Failed to insert signal 13: {
   signal: { group: 'VehicleIdentification', name: 'ExteriorColor' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.107Z [error] ❌ Failed to insert signal 14: {
+2025-10-17T02:17:55.141Z [error] ❌ Failed to insert signal 14: {
   signal: { group: 'VehicleIdentification', name: 'Nickname' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.107Z [error] ❌ Failed to insert signal 15: {
+2025-10-17T02:17:55.141Z [error] ❌ Failed to insert signal 15: {
   signal: { group: 'VehicleIdentification', name: 'Packages' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.108Z [error] ❌ Failed to insert signal 16: {
+2025-10-17T02:17:55.141Z [error] ❌ Failed to insert signal 16: {
   signal: { group: 'VehicleIdentification', name: 'Trim' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.108Z [error] ❌ Failed to insert signal 17: {
+2025-10-17T02:17:55.141Z [error] ❌ Failed to insert signal 17: {
   signal: { group: 'VehicleIdentification', name: 'VIN' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.109Z [error] ❌ Failed to insert signal 18: {
+2025-10-17T02:17:55.141Z [error] ❌ Failed to insert signal 18: {
   signal: { group: 'Charge', name: 'Amperage' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.109Z [error] ❌ Failed to insert signal 19: {
+2025-10-17T02:17:55.142Z [error] ❌ Failed to insert signal 19: {
   signal: { group: 'Charge', name: 'AmperageMax' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.109Z [error] ❌ Failed to insert signal 20: {
+2025-10-17T02:17:55.142Z [error] ❌ Failed to insert signal 20: {
   signal: { group: 'Charge', name: 'AmperageRequested' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.109Z [error] ❌ Failed to insert signal 21: {
+2025-10-17T02:17:55.142Z [error] ❌ Failed to insert signal 21: {
   signal: { group: 'Charge', name: 'ChargeLimits' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.109Z [error] ❌ Failed to insert signal 22: {
+2025-10-17T02:17:55.142Z [error] ❌ Failed to insert signal 22: {
   signal: { group: 'Charge', name: 'ChargePortStatusColor' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.109Z [error] ❌ Failed to insert signal 23: {
+2025-10-17T02:17:55.142Z [error] ❌ Failed to insert signal 23: {
   signal: { group: 'Charge', name: 'ChargeRate' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.109Z [error] ❌ Failed to insert signal 24: {
+2025-10-17T02:17:55.142Z [error] ❌ Failed to insert signal 24: {
   signal: { group: 'Charge', name: 'ChargeRecords' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.109Z [error] ❌ Failed to insert signal 25: {
+2025-10-17T02:17:55.142Z [error] ❌ Failed to insert signal 25: {
   signal: { group: 'Charge', name: 'ChargerPhases' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.110Z [error] ❌ Failed to insert signal 26: {
+2025-10-17T02:17:55.142Z [error] ❌ Failed to insert signal 26: {
   signal: { group: 'Charge', name: 'ChargeTimers' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.110Z [error] ❌ Failed to insert signal 27: {
+2025-10-17T02:17:55.142Z [error] ❌ Failed to insert signal 27: {
   signal: { group: 'Charge', name: 'ChargingConnectorType' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.110Z [error] ❌ Failed to insert signal 28: {
+2025-10-17T02:17:55.143Z [error] ❌ Failed to insert signal 28: {
   signal: { group: 'Charge', name: 'DetailedChargingStatus' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.110Z [error] ❌ Failed to insert signal 29: {
+2025-10-17T02:17:55.143Z [error] ❌ Failed to insert signal 29: {
   signal: { group: 'Charge', name: 'EnergyAdded' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.110Z [error] ❌ Failed to insert signal 30: {
+2025-10-17T02:17:55.143Z [error] ❌ Failed to insert signal 30: {
   signal: { group: 'Charge', name: 'FastChargerType' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.110Z [error] ❌ Failed to insert signal 31: {
+2025-10-17T02:17:55.143Z [error] ❌ Failed to insert signal 31: {
   signal: { group: 'Charge', name: 'IsCharging' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.110Z [error] ❌ Failed to insert signal 32: {
+2025-10-17T02:17:55.143Z [error] ❌ Failed to insert signal 32: {
   signal: { group: 'Charge', name: 'IsChargingCableConnected' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.110Z [error] ❌ Failed to insert signal 33: {
+2025-10-17T02:17:55.143Z [error] ❌ Failed to insert signal 33: {
   signal: { group: 'Charge', name: 'IsChargingCableLatched' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.110Z [error] ❌ Failed to insert signal 34: {
+2025-10-17T02:17:55.143Z [error] ❌ Failed to insert signal 34: {
   signal: { group: 'Charge', name: 'IsChargingPortFlapOpen' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.111Z [error] ❌ Failed to insert signal 35: {
+2025-10-17T02:17:55.143Z [error] ❌ Failed to insert signal 35: {
   signal: { group: 'Charge', name: 'IsFastChargerPresent' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.111Z [error] ❌ Failed to insert signal 36: {
+2025-10-17T02:17:55.143Z [error] ❌ Failed to insert signal 36: {
   signal: { group: 'Charge', name: 'TimeToComplete' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.111Z [error] ❌ Failed to insert signal 37: {
+2025-10-17T02:17:55.144Z [error] ❌ Failed to insert signal 37: {
   signal: { group: 'Charge', name: 'Voltage' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.112Z [error] ❌ Failed to insert signal 38: {
+2025-10-17T02:17:55.144Z [error] ❌ Failed to insert signal 38: {
   signal: { group: 'Charge', name: 'Wattage' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.112Z [error] ❌ Failed to insert signal 39: {
+2025-10-17T02:17:55.144Z [error] ❌ Failed to insert signal 39: {
   signal: { group: 'Climate', name: 'ExternalTemperature' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.112Z [error] ❌ Failed to insert signal 40: {
+2025-10-17T02:17:55.144Z [error] ❌ Failed to insert signal 40: {
   signal: { group: 'Climate', name: 'InternalTemperature' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.112Z [error] ❌ Failed to insert signal 41: {
+2025-10-17T02:17:55.145Z [error] ❌ Failed to insert signal 41: {
   signal: { group: 'Closure', name: 'Doors' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.112Z [error] ❌ Failed to insert signal 42: {
+2025-10-17T02:17:55.145Z [error] ❌ Failed to insert signal 42: {
   signal: { group: 'Closure', name: 'EngineCover' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.113Z [error] ❌ Failed to insert signal 43: {
+2025-10-17T02:17:55.145Z [error] ❌ Failed to insert signal 43: {
   signal: { group: 'Closure', name: 'FrontTrunk' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.113Z [error] ❌ Failed to insert signal 44: {
+2025-10-17T02:17:55.145Z [error] ❌ Failed to insert signal 44: {
   signal: { group: 'Closure', name: 'IsLocked' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.113Z [error] ❌ Failed to insert signal 45: {
+2025-10-17T02:17:55.146Z [error] ❌ Failed to insert signal 45: {
   signal: { group: 'Closure', name: 'RearTrunk' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.113Z [error] ❌ Failed to insert signal 46: {
+2025-10-17T02:17:55.146Z [error] ❌ Failed to insert signal 46: {
   signal: { group: 'Closure', name: 'Sunroof' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.113Z [error] ❌ Failed to insert signal 47: {
+2025-10-17T02:17:55.146Z [error] ❌ Failed to insert signal 47: {
   signal: { group: 'Closure', name: 'Tailgate' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.113Z [error] ❌ Failed to insert signal 48: {
+2025-10-17T02:17:55.146Z [error] ❌ Failed to insert signal 48: {
   signal: { group: 'Closure', name: 'Windows' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.113Z [error] ❌ Failed to insert signal 49: {
+2025-10-17T02:17:55.146Z [error] ❌ Failed to insert signal 49: {
   signal: { group: 'Location', name: 'IsAtHome' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.114Z [error] ❌ Failed to insert signal 50: {
+2025-10-17T02:17:55.146Z [error] ❌ Failed to insert signal 50: {
   signal: { group: 'Location', name: 'PreciseLocation' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.114Z [error] ❌ Failed to insert signal 51: {
+2025-10-17T02:17:55.146Z [error] ❌ Failed to insert signal 51: {
   signal: { group: 'LowVoltageBattery', name: 'StateOfCharge' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.114Z [error] ❌ Failed to insert signal 52: {
+2025-10-17T02:17:55.146Z [error] ❌ Failed to insert signal 52: {
   signal: { group: 'LowVoltageBattery', name: 'Status' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.114Z [error] ❌ Failed to insert signal 53: {
+2025-10-17T02:17:55.146Z [error] ❌ Failed to insert signal 53: {
   signal: { group: 'Motion', name: 'CurrentSpeed' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.114Z [error] ❌ Failed to insert signal 54: {
+2025-10-17T02:17:55.147Z [error] ❌ Failed to insert signal 54: {
   signal: { group: 'Odometer', name: 'TraveledDistance' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.114Z [error] ❌ Failed to insert signal 55: {
+2025-10-17T02:17:55.147Z [error] ❌ Failed to insert signal 55: {
   signal: { group: 'Service', name: 'IsInService' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.114Z [error] ❌ Failed to insert signal 56: {
+2025-10-17T02:17:55.147Z [error] ❌ Failed to insert signal 56: {
   signal: { group: 'Service', name: 'Records' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.114Z [error] ❌ Failed to insert signal 57: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 57: {
   signal: { group: 'Surveillance', name: 'IsEnabled' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.114Z [error] ❌ Failed to insert signal 58: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 58: {
   signal: { group: 'TractionBattery', name: 'IsHeaterActive' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.114Z [error] ❌ Failed to insert signal 59: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 59: {
   signal: { group: 'TractionBattery', name: 'MaxRangeChargeCounter' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.115Z [error] ❌ Failed to insert signal 60: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 60: {
   signal: { group: 'TractionBattery', name: 'NominalCapacity' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.115Z [error] ❌ Failed to insert signal 61: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 61: {
   signal: { group: 'TractionBattery', name: 'Range' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.115Z [error] ❌ Failed to insert signal 62: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 62: {
   signal: { group: 'TractionBattery', name: 'StateOfCharge' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.115Z [error] ❌ Failed to insert signal 63: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 63: {
   signal: { group: 'Transmission', name: 'DriveMode' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.115Z [error] ❌ Failed to insert signal 64: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 64: {
   signal: { group: 'Transmission', name: 'GearState' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.115Z [error] ❌ Failed to insert signal 65: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 65: {
   signal: { group: 'VehicleUserAccount', name: 'Permissions' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.115Z [error] ❌ Failed to insert signal 66: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 66: {
   signal: { group: 'VehicleUserAccount', name: 'Role' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.115Z [error] ❌ Failed to insert signal 67: {
+2025-10-17T02:17:55.149Z [error] ❌ Failed to insert signal 67: {
   signal: { group: 'Wheel', name: 'Tires' },
   error: "Cannot read properties of undefined (reading 'webhookEventId')"
 }
-2025-10-17T02:05:15.116Z [info] ✅ Signals processing completed: 0 successful, 68 failed
-2025-10-17T02:05:15.116Z [info] 🎉 Webhook processing completed successfully
+2025-10-17T02:17:55.149Z [info] ✅ Signals processing completed: 0 successful, 68 failed
+2025-10-17T02:17:55.149Z [info] 🎉 Webhook processing completed successfully

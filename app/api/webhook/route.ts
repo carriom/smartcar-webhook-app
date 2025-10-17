@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { db } from '@/db/client'
-import { vehicles, webhookEvents, signals } from '@/db/schema'
+import { vehicles, webhookEvents, signals as signalsTable } from '@/db/schema'
 import { verifySmartcarSignature } from '@/lib/verifySignature'
 import { flattenData } from '@/lib/flatten'
 import { eq } from 'drizzle-orm'
@@ -87,13 +87,13 @@ export async function POST(req: NextRequest) {
   const eventType: string = json.eventType
   const vehicleId: string = json.data?.vehicle?.id
   const eventTimestamp: string = json.meta?.deliveredAt || new Date().toISOString()
-  const signals: any[] = json.data?.signals || []
+  const incomingSignals: any[] = json.data?.signals || []
 
   console.log('📊 Webhook event details:', {
     eventType,
     vehicleId,
     eventTimestamp,
-    signalsCount: signals.length,
+    signalsCount: incomingSignals.length,
     hasVehicle: !!json.data?.vehicle,
     hasUser: !!json.data?.user
   })
@@ -178,7 +178,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Process Smartcar signals format - COMPLETELY NEW APPROACH
-    if (signals.length > 0 && eventRow && eventRow.id && typeof eventRow.id === 'string') {
+    if (incomingSignals.length > 0 && eventRow && eventRow.id && typeof eventRow.id === 'string') {
       console.log('💾 Processing signals with individual insertion approach')
       console.log('📊 EventRow details:', { id: eventRow.id, type: typeof eventRow.id })
       
@@ -189,8 +189,16 @@ export async function POST(req: NextRequest) {
         let successCount = 0
         let errorCount = 0
         
-        for (let i = 0; i < signals.length; i++) {
-          const signal = signals[i]
+        for (let i = 0; i < incomingSignals.length; i++) {
+          const signal = incomingSignals[i]
+          let signalData: {
+            webhookEventId: string
+            vehicleId: string
+            signalPath: string
+            value: string | null
+            unit: string | null
+            recordedAt: Date
+          } | null = null
           
           try {
             // Validate signal
@@ -214,26 +222,33 @@ export async function POST(req: NextRequest) {
               value = String(signal.body)
             }
             
-            // Insert single signal
-            await db.insert(signals).values({
+            // Insert single signal - ensure all required fields are present
+            signalData = {
               webhookEventId: eventRow.id,
-              vehicleId,
+              vehicleId: vehicleId,
               signalPath: `${signal.group.toLowerCase()}.${signal.name.toLowerCase()}`,
-              value,
-              unit: signal.body?.unit || null,
-            })
+              value: value,
+              unit: signal.body?.unit !== undefined ? signal.body.unit : null,
+              recordedAt: new Date(),
+            };
+
+            console.log(`📝 Inserting signal: ${signalData.signalPath} = ${signalData.value}`);
+
+            await db.insert(signalsTable).values(signalData)
             
             successCount++
             
             // Log progress every 10 signals
             if (successCount % 10 === 0) {
-              console.log(`📊 Processed ${successCount}/${signals.length} signals...`)
+              console.log(`📊 Processed ${successCount}/${incomingSignals.length} signals...`)
             }
             
           } catch (singleSignalError) {
             console.error(`❌ Failed to insert signal ${i}:`, {
               signal: { group: signal?.group, name: signal?.name },
-              error: singleSignalError instanceof Error ? singleSignalError.message : String(singleSignalError)
+              signalData: signalData,
+              error: singleSignalError instanceof Error ? singleSignalError.message : String(singleSignalError),
+              stack: singleSignalError instanceof Error ? singleSignalError.stack : undefined
             })
             errorCount++
           }
@@ -243,7 +258,7 @@ export async function POST(req: NextRequest) {
       } else {
         console.log('⚠️ Skipping signals storage due to database issues')
       }
-    } else if (signals.length > 0) {
+    } else if (incomingSignals.length > 0) {
       console.log('⚠️ Skipping signals processing - no valid eventRow or eventRow.id')
       console.log('📊 EventRow status:', { 
         hasEventRow: !!eventRow, 

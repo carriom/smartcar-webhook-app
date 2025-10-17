@@ -204,18 +204,14 @@ export async function POST(req: NextRequest) {
               continue
             }
             
-            // Handle different signal value types
+            // Store the entire body as JSON string for maximum flexibility
             let value = null
-            if (signal.body?.value !== undefined) {
-              if (typeof signal.body.value === 'string' || 
-                  typeof signal.body.value === 'number' || 
-                  typeof signal.body.value === 'boolean') {
-                value = String(signal.body.value)
-              } else {
-                value = JSON.stringify(signal.body.value)
-              }
-            } else if (signal.body && typeof signal.body === 'object') {
+            if (signal.body && typeof signal.body === 'object') {
+              // Store the entire body as JSON to preserve all data
               value = JSON.stringify(signal.body)
+            } else if (signal.body !== undefined) {
+              // For primitive values, convert to string
+              value = String(signal.body)
             }
             
             // Insert single signal

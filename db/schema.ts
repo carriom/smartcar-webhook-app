@@ -24,7 +24,7 @@ export const signals = pgTable('signals', {
   webhookEventId: uuid('webhook_event_id').references(() => webhookEvents.id),
   vehicleId: text('vehicle_id'),
   signalPath: text('signal_path'),
-  value: numeric('value'),
+  value: text('value'), // Flexible text field for JSON or primitive values
   unit: text('unit'),
   recordedAt: timestamp('recorded_at', { withTimezone: true }).defaultNow(),
 })

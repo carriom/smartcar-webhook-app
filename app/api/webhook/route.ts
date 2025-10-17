@@ -193,35 +193,51 @@ export async function POST(req: NextRequest) {
         })
       }
       
-      const signalEntries = signals.map((signal) => ({
-        webhookEventId: eventRow.id,
-        vehicleId,
-        signalPath: `${signal.group.toLowerCase()}.${signal.name.toLowerCase()}`,
-        value: signal.body?.value ? String(signal.body.value) : null,
-        unit: signal.body?.unit || null,
-      }))
+      // Filter out invalid signals and map to database format
+      const signalEntries = signals
+        .filter((signal) => {
+          // Ensure signal has required properties
+          return signal && 
+                 typeof signal === 'object' && 
+                 signal.group && 
+                 signal.name && 
+                 signal.body !== undefined
+        })
+        .map((signal) => ({
+          webhookEventId: eventRow.id,
+          vehicleId,
+          signalPath: `${signal.group.toLowerCase()}.${signal.name.toLowerCase()}`,
+          value: signal.body?.value !== undefined ? String(signal.body.value) : null,
+          unit: signal.body?.unit || null,
+        }))
 
       console.log('📊 Signal entries to process:', signalEntries.length)
-      console.log('📊 First few entries:', signalEntries.slice(0, 3))
-
-      // Only try to store signals if we have a real database ID
-      if (!eventRow.id.startsWith('temp-')) {
-      try {
-        console.log('🔍 Attempting to insert signals into database...')
-        console.log('📊 Sample signal entry structure:', JSON.stringify(signalEntries[0], null, 2))
-        
-        const result = await db.insert(signals).values(signalEntries)
-        console.log('✅ Signals stored successfully:', signalEntries.length, 'entries')
-        console.log('📊 Insert result:', result)
-      } catch (signalError) {
-        console.error('❌ Failed to insert signals:', signalError)
-        console.error('❌ Error details:', {
-          name: signalError instanceof Error ? signalError.name : 'Unknown',
-          message: signalError instanceof Error ? signalError.message : String(signalError),
-          stack: signalError instanceof Error ? signalError.stack : undefined
-        })
-        console.log('⚠️ Continuing without signals due to error')
+      console.log('📊 Filtered signals count:', signalEntries.length, 'out of', signals.length, 'original signals')
+      
+      if (signalEntries.length > 0) {
+        console.log('📊 First few entries:', signalEntries.slice(0, 3))
       }
+
+      // Only try to store signals if we have a real database ID and valid entries
+      if (!eventRow.id.startsWith('temp-') && signalEntries.length > 0) {
+        try {
+          console.log('🔍 Attempting to insert signals into database...')
+          console.log('📊 Sample signal entry structure:', JSON.stringify(signalEntries[0], null, 2))
+          
+          const result = await db.insert(signals).values(signalEntries)
+          console.log('✅ Signals stored successfully:', signalEntries.length, 'entries')
+          console.log('📊 Insert result:', result)
+        } catch (signalError) {
+          console.error('❌ Failed to insert signals:', signalError)
+          console.error('❌ Error details:', {
+            name: signalError instanceof Error ? signalError.name : 'Unknown',
+            message: signalError instanceof Error ? signalError.message : String(signalError),
+            stack: signalError instanceof Error ? signalError.stack : undefined
+          })
+          console.log('⚠️ Continuing without signals due to error')
+        }
+      } else if (signalEntries.length === 0) {
+        console.log('⚠️ No valid signals to store after filtering')
       } else {
         console.log('⚠️ Skipping signals storage due to database issues')
       }

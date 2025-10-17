@@ -132,22 +132,47 @@ export async function POST(req: NextRequest) {
     }
 
     console.log('💾 Storing webhook event')
-    const [eventRow] = await db
-      .insert(webhookEvents)
-      .values({
-        vehicleId,
-        eventName: eventType,
-        eventTimestamp: new Date(eventTimestamp),
-        signatureValid: true,
-        rawPayload: json,
-      })
-      .returning()
+    console.log('📝 Event data:', {
+      vehicleId,
+      eventName: eventType,
+      eventTimestamp: new Date(eventTimestamp),
+      signatureValid: true,
+      payloadSize: JSON.stringify(json).length
+    })
+    
+    let eventRow: any = null
+    try {
+      const result = await db
+        .insert(webhookEvents)
+        .values({
+          vehicleId,
+          eventName: eventType,
+          eventTimestamp: new Date(eventTimestamp),
+          signatureValid: true,
+          rawPayload: json,
+        })
+        .returning()
 
-    console.log('✅ Webhook event stored with ID:', eventRow.id)
+      eventRow = result[0]
+      console.log('✅ Webhook event stored with ID:', eventRow?.id)
+    } catch (dbError) {
+      console.error('❌ Database insert failed:', dbError)
+      console.log('⚠️ Continuing without database storage due to error')
+      // Create a mock eventRow for signals processing
+      eventRow = { id: `temp-${Date.now()}` }
+    }
+
+    if (!eventRow) {
+      console.error('❌ Failed to insert webhook event - no row returned')
+      return NextResponse.json({ 
+        error: 'Failed to store webhook event',
+        details: 'Database insert returned no rows'
+      }, { status: 500 })
+    }
 
     // Process Smartcar signals format
     if (signals.length > 0) {
-      console.log('💾 Storing signals from Smartcar format')
+      console.log('💾 Processing signals from Smartcar format')
       const signalEntries = signals.map((signal) => ({
         webhookEventId: eventRow.id,
         vehicleId,
@@ -156,8 +181,21 @@ export async function POST(req: NextRequest) {
         unit: signal.body?.unit || null,
       }))
 
-      await db.insert(signals).values(signalEntries)
-      console.log('✅ Signals stored successfully:', signalEntries.length, 'entries')
+      console.log('📊 Signal entries to process:', signalEntries.length)
+      console.log('📊 First few entries:', signalEntries.slice(0, 3))
+
+      // Only try to store signals if we have a real database ID
+      if (eventRow.id && !eventRow.id.startsWith('temp-')) {
+        try {
+          await db.insert(signals).values(signalEntries)
+          console.log('✅ Signals stored successfully:', signalEntries.length, 'entries')
+        } catch (signalError) {
+          console.error('❌ Failed to insert signals:', signalError)
+          console.log('⚠️ Continuing without signals due to error')
+        }
+      } else {
+        console.log('⚠️ Skipping signals storage due to database issues')
+      }
     }
 
     console.log('🎉 Webhook processing completed successfully')

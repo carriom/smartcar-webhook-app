@@ -206,13 +206,22 @@ export async function POST(req: NextRequest) {
 
       // Only try to store signals if we have a real database ID
       if (!eventRow.id.startsWith('temp-')) {
-        try {
-          await db.insert(signals).values(signalEntries)
-          console.log('✅ Signals stored successfully:', signalEntries.length, 'entries')
-        } catch (signalError) {
-          console.error('❌ Failed to insert signals:', signalError)
-          console.log('⚠️ Continuing without signals due to error')
-        }
+      try {
+        console.log('🔍 Attempting to insert signals into database...')
+        console.log('📊 Sample signal entry structure:', JSON.stringify(signalEntries[0], null, 2))
+        
+        const result = await db.insert(signals).values(signalEntries)
+        console.log('✅ Signals stored successfully:', signalEntries.length, 'entries')
+        console.log('📊 Insert result:', result)
+      } catch (signalError) {
+        console.error('❌ Failed to insert signals:', signalError)
+        console.error('❌ Error details:', {
+          name: signalError.name,
+          message: signalError.message,
+          stack: signalError.stack
+        })
+        console.log('⚠️ Continuing without signals due to error')
+      }
       } else {
         console.log('⚠️ Skipping signals storage due to database issues')
       }

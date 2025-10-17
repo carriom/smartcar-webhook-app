@@ -13,8 +13,8 @@
   "dependencies": {
     "@vercel/postgres": "^0.9.0",
     "drizzle-orm": "^0.36.0",
-    "postgres": "^3.4.4",
     "next": "^14.2.5",
+    "postgres": "^3.4.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -23,7 +23,8 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.19",
-    "drizzle-kit": "^0.24.0",
+    "dotenv-cli": "^10.0.0",
+    "drizzle-kit": "^0.31.5",
     "eslint": "^8.57.0",
     "eslint-config-next": "^14.2.5",
     "postcss": "^8.4.39",
@@ -31,4 +32,3 @@
     "typescript": "^5.5.4"
   }
 }
-

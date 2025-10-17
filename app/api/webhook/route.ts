@@ -4,6 +4,7 @@ import { vehicles, webhookEvents, signals } from '@/db/schema'
 import { verifySmartcarSignature } from '@/lib/verifySignature'
 import { flattenData } from '@/lib/flatten'
 import { eq } from 'drizzle-orm'
+import crypto from 'node:crypto'
 
 export const runtime = 'nodejs'
 
@@ -16,17 +17,34 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'SMARTCAR_WEBHOOK_SECRET not configured' }, { status: 500 })
   }
 
-  const isValid = verifySmartcarSignature({ bodyBuffer, signatureHeader, secret })
-  if (!isValid) {
-    // Skip insert if invalid signature
-    return NextResponse.json({ ok: false, error: 'invalid signature' }, { status: 401 })
-  }
-
   let json: any
   try {
     json = JSON.parse(bodyBuffer.toString('utf8'))
   } catch {
     return NextResponse.json({ error: 'invalid json' }, { status: 400 })
+  }
+
+  // Handle Smartcar webhook verification challenge
+  if (json.eventType === 'VERIFY') {
+    const challenge = json.data?.challenge
+    if (!challenge) {
+      return NextResponse.json({ error: 'Missing challenge in verification payload' }, { status: 400 })
+    }
+
+    // Hash the challenge with the secret (HMAC SHA-256)
+    const hmac = crypto
+      .createHmac('sha256', secret)
+      .update(challenge)
+      .digest('hex')
+
+    return NextResponse.json({ challenge: hmac })
+  }
+
+  // For actual webhook events, verify signature
+  const isValid = verifySmartcarSignature({ bodyBuffer, signatureHeader, secret })
+  if (!isValid) {
+    // Skip insert if invalid signature
+    return NextResponse.json({ ok: false, error: 'invalid signature' }, { status: 401 })
   }
 
   const eventName: string = json.eventName

@@ -177,114 +177,73 @@ export async function POST(req: NextRequest) {
       }, { status: 500 })
     }
 
-    // Process Smartcar signals format
+    // Process Smartcar signals format - COMPLETELY NEW APPROACH
     if (signals.length > 0 && eventRow && eventRow.id && typeof eventRow.id === 'string') {
-      console.log('💾 Processing signals from Smartcar format')
+      console.log('💾 Processing signals with individual insertion approach')
       console.log('📊 EventRow details:', { id: eventRow.id, type: typeof eventRow.id })
       
-      // Double-check that eventRow.id exists before mapping
-      if (!eventRow.id) {
-        console.error('❌ eventRow.id is undefined, skipping signals processing')
-        return NextResponse.json({ 
-          ok: true, 
-          id: 'temp-' + Date.now(),
-          databaseStatus: 'failed',
-          error: 'eventRow.id is undefined'
-        })
-      }
-      
-      // Filter out invalid signals and map to database format
-      const signalEntries = signals
-        .filter((signal) => {
-          // Ensure signal has required properties
-          return signal && 
-                 typeof signal === 'object' && 
-                 signal.group && 
-                 signal.name && 
-                 signal.body !== undefined
-        })
-        .map((signal) => {
-          // Additional validation inside map to catch any remaining issues
-          if (!signal || !signal.group || !signal.name) {
-            console.error('❌ Invalid signal in map:', signal)
-            return null
-          }
-          
-          // Handle different signal value types
-          let value = null
-          if (signal.body?.value !== undefined) {
-            // For simple values (numbers, strings, booleans)
-            if (typeof signal.body.value === 'string' || 
-                typeof signal.body.value === 'number' || 
-                typeof signal.body.value === 'boolean') {
-              value = String(signal.body.value)
-            }
-            // For complex objects, store as JSON string
-            else if (typeof signal.body.value === 'object') {
-              value = JSON.stringify(signal.body.value)
-            }
-          }
-          // For signals with no simple value but have other data
-          else if (signal.body && Object.keys(signal.body).length > 0) {
-            value = JSON.stringify(signal.body)
-          }
-          
-          return {
-            webhookEventId: eventRow.id,
-            vehicleId,
-            signalPath: `${signal.group.toLowerCase()}.${signal.name.toLowerCase()}`,
-            value,
-            unit: signal.body?.unit || null,
-          }
-        })
-        .filter((entry) => entry !== null) // Remove any null entries
-
-      console.log('📊 Signal entries to process:', signalEntries.length)
-      console.log('📊 Filtered signals count:', signalEntries.length, 'out of', signals.length, 'original signals')
-      
-      if (signalEntries.length > 0) {
-        console.log('📊 First few entries:', signalEntries.slice(0, 3))
+      // Only try to store signals if we have a real database ID
+      if (!eventRow.id.startsWith('temp-')) {
+        console.log('🔍 Processing signals one by one to avoid array issues...')
         
-        // Check for any undefined entries
-        const undefinedEntries = signalEntries.filter(entry => !entry || !entry.webhookEventId)
-        if (undefinedEntries.length > 0) {
-          console.error('❌ Found undefined entries:', undefinedEntries.length)
-          console.error('❌ Undefined entries:', undefinedEntries)
+        let successCount = 0
+        let errorCount = 0
+        
+        for (let i = 0; i < signals.length; i++) {
+          const signal = signals[i]
+          
+          try {
+            // Validate signal
+            if (!signal || typeof signal !== 'object' || !signal.group || !signal.name) {
+              console.log(`⚠️ Skipping invalid signal ${i}:`, { 
+                hasSignal: !!signal, 
+                hasGroup: !!signal?.group, 
+                hasName: !!signal?.name 
+              })
+              errorCount++
+              continue
+            }
+            
+            // Handle different signal value types
+            let value = null
+            if (signal.body?.value !== undefined) {
+              if (typeof signal.body.value === 'string' || 
+                  typeof signal.body.value === 'number' || 
+                  typeof signal.body.value === 'boolean') {
+                value = String(signal.body.value)
+              } else {
+                value = JSON.stringify(signal.body.value)
+              }
+            } else if (signal.body && typeof signal.body === 'object') {
+              value = JSON.stringify(signal.body)
+            }
+            
+            // Insert single signal
+            await db.insert(signals).values({
+              webhookEventId: eventRow.id,
+              vehicleId,
+              signalPath: `${signal.group.toLowerCase()}.${signal.name.toLowerCase()}`,
+              value,
+              unit: signal.body?.unit || null,
+            })
+            
+            successCount++
+            
+            // Log progress every 10 signals
+            if (successCount % 10 === 0) {
+              console.log(`📊 Processed ${successCount}/${signals.length} signals...`)
+            }
+            
+          } catch (singleSignalError) {
+            console.error(`❌ Failed to insert signal ${i}:`, {
+              signal: { group: signal?.group, name: signal?.name },
+              error: singleSignalError instanceof Error ? singleSignalError.message : String(singleSignalError)
+            })
+            errorCount++
+          }
         }
         
-        // Validate all entries before database insertion
-        const invalidEntries = signalEntries.filter(entry => 
-          !entry || 
-          !entry.webhookEventId || 
-          !entry.vehicleId || 
-          !entry.signalPath
-        )
-        if (invalidEntries.length > 0) {
-          console.error('❌ Found invalid entries:', invalidEntries.length)
-          console.error('❌ Invalid entries:', invalidEntries)
-        }
-      }
-
-      // Only try to store signals if we have a real database ID and valid entries
-      if (!eventRow.id.startsWith('temp-') && signalEntries.length > 0) {
-        try {
-          console.log('🔍 Attempting to insert signals into database...')
-          console.log('📊 Sample signal entry structure:', JSON.stringify(signalEntries[0], null, 2))
-          
-          const result = await db.insert(signals).values(signalEntries)
-          console.log('✅ Signals stored successfully:', signalEntries.length, 'entries')
-          console.log('📊 Insert result:', result)
-        } catch (signalError) {
-          console.error('❌ Failed to insert signals:', signalError)
-          console.error('❌ Error details:', {
-            name: signalError instanceof Error ? signalError.name : 'Unknown',
-            message: signalError instanceof Error ? signalError.message : String(signalError),
-            stack: signalError instanceof Error ? signalError.stack : undefined
-          })
-          console.log('⚠️ Continuing without signals due to error')
-        }
-      } else if (signalEntries.length === 0) {
-        console.log('⚠️ No valid signals to store after filtering')
+        console.log(`✅ Signals processing completed: ${successCount} successful, ${errorCount} failed`)
       } else {
         console.log('⚠️ Skipping signals storage due to database issues')
       }
